@@ -12,6 +12,20 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>This is the Odin Library</h1>
+  <h1>This is the <span class="intro-library-span">Odin Library</span></h1>
+
+  <div id="books" class="books">
+    <template id="book-template">
+      <div class="book">
+        <div class="book-intro">
+          <h2 class="book-title">Book Title</h2>
+          <p class="book-author-span">By <span class="book-author">Author: Author Name</span></p>
+        </div>
+        <p class="book-pages-span"><span class="book-pages">123</span> Pages</p>
+        <p class="book-read">Read</p>
+        <!-- <button class="delete">Delete</button> -->
+      </div>
+    </template>
+  </div>
 </body>
 </html>
