@@ -65,12 +65,6 @@ body {
   margin-top: 0px;
 }
 
-.book-read {
-  font-weight: 700;
-  aspect-ratio: 1 / 1;
-  width: 2rem;
-}
-
 .book-read-label {
   font-weight: 700;
 }
@@ -235,12 +229,6 @@ dialog {
   opacity: 0;
   cursor: pointer;
   transition: all 0.2s ease allow-discrete;
-}
-
-.book-read .check-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .book-read {

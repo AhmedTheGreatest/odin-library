@@ -40,7 +40,8 @@ function displayBooks(books) {
     bookElement.querySelector('.book-read-label').textContent = book.read ? 'Read' : 'Not read yet';
     let readBtn = bookElement.querySelector('.book-read')
     readBtn.dataset.index = index;
-    readBtn.addEventListener('click', toggleRead);
+    readBtn.checked = book.read;
+    readBtn.addEventListener('change', toggleRead);
 
     let removeBtn = bookElement.querySelector('.book-remove');
     removeBtn.dataset.index = index;
