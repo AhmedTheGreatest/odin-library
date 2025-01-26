@@ -9,23 +9,72 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=done_outline" />
   <script src="script.js" defer></script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 700,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
 </head>
 <body>
-  <h1>This is the <span class="intro-library-span">Odin Library</span></h1>
+  <header>
+    <h1>This is the <span class="intro-library-span">Odin Library</span></h1>
+    <button class="new-book-btn">New Book</button>
+  </header>
 
-  <div id="books" class="books">
-    <template id="book-template">
-      <div class="book">
-        <div class="book-intro">
-          <h2 class="book-title">Book Title</h2>
-          <p class="book-author-span">By <span class="book-author">Author: Author Name</span></p>
-        </div>
-        <p class="book-pages-span"><span class="book-pages">123</span> Pages</p>
-        <p class="book-read">Read</p>
-        <!-- <button class="delete">Delete</button> -->
+  <template id="book-template">
+    <div class="book">
+      <button class="book-remove">X</button>
+      <div class="book-intro">
+        <h2 class="book-title">Book Title</h2>
+        <p class="book-author-span">By <span class="book-author">Author: Author Name</span></p>
       </div>
-    </template>
+      <p class="book-pages-span"><span class="book-pages">123</span> Pages</p>
+      <span class="book-read-span">
+        <button class="book-read">
+          <span class="material-symbols-outlined check-icon">done_outline</span>
+        </button> 
+        <span class="book-read-label">Read</span>
+      </span>
+      <!-- <button class="delete">Delete</button> -->
+    </div>
+  </template>
+  <div id="books" class="books">
   </div>
+  <dialog id="book-form-modal">
+    <div class="book-modal-header">
+      <h2>Add a new Book</h2>
+      <form method="dialog">
+        <button class="close-form">X</button>
+      </form>
+    </div>
+
+    <form action="#">
+      <p>
+        <label class="book-form-label" for="title">Title</label>
+        <input class="book-form-input" type="text" id="title" name="title" required>
+      </p>
+      <p>
+        <label class="book-form-label" for="author">Author</label>
+        <input class="book-form-input" type="text" id="author" name="author" required>
+      </p>
+      <p>
+        <label class="book-form-label" for="pages">Pages</label>
+        <input class="book-form-input" type="number" id="pages" name="pages" required>
+      </p>
+      <p class="book-form-checkbox-container">
+        <label class="book-form-label" for="read">Read</label>
+        <input class="book-form-checkbox" type="checkbox" id="read" name="read">
+      </p>
+
+      <button class="book-form-submit" type="submit">Submit</button>
+    </form>
+  </dialog>
 </body>
 </html>
